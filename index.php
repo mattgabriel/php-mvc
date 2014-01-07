@@ -15,13 +15,12 @@ error_reporting(E_ALL);
 //===============================================
 define('APP_PATH','app/'); //with trailing slash pls
 define('WEB_FOLDER','/'); //with trailing slash pls
-//define('WEB_URL','http://95.138.170.179'.WEB_FOLDER); //http://www.xxx.com without trailing slash
-define('WEB_URL','http://filtered.com'.WEB_FOLDER); //http://www.xxx.com without trailing slash
+define('WEB_URL','http://websiteName.com'.WEB_FOLDER); //http://www.xxx.com without trailing slash
 
 //===============================================
 // Other Settings
 //===============================================
-$GLOBALS['sitename']='Filtered';
+$GLOBALS['sitename']='websiteName';
 
 //===============================================
 // Includes
@@ -60,7 +59,7 @@ function getdbh() {
   if (!isset($GLOBALS['dbh']))
     try {
       //$GLOBALS['dbh'] = new PDO('sqlite:'.APP_PATH.'db/kissmvc.sqlite');
-      $GLOBALS['dbh'] = new PDO('mysql:host=localhost;dbname=Ewb', 'root', '3x3l1_2');
+      $GLOBALS['dbh'] = new PDO('mysql:host=localhost;dbname=NameGoesHere', 'root', 'PasswordGoesHere');
 
     } catch (PDOException $e) {
       die('Connection failed: '.$e->getMessage());
