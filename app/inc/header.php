@@ -1,6 +1,6 @@
 <?php
 
-class headerClass extends Menus {
+class headerClass {
 	
 	function __construct(){
 		

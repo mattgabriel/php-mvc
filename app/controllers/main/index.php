@@ -23,6 +23,10 @@ class indexClass extends Users{
 		$view = new View(APP_PATH.'views/layout.php');
 		require_once(APP_PATH.'inc/head.php');
 		$head = new headClass();
+		require_once(APP_PATH.'inc/header.php');
+		$header = new headerClass();
+		require_once(APP_PATH.'inc/footer.php');
+		$footer = new footerClass();
 		require_once(APP_PATH.'library/library.php');
 		$this->library = new libraryClass();
 		require_once(APP_PATH.'library/config.php');
@@ -30,9 +34,8 @@ class indexClass extends Users{
 		$this->users = new Users();
 
 		//set output
-		$view->set('head',$head->displayHead(null,null,null,null,
-			''));
-		$view->set('header',$header->userHeader());
+		$view->set('head',$head->displayHead(null,null,null,null,''));
+		$view->set('header',$header->displayHeader());
 		$view->set('footer',$footer->displayFooter());
 		$view->set('content',$this->content());
 		$view->dump();
