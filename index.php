@@ -20,7 +20,7 @@ define('WEB_URL','http://websiteName.com'.WEB_FOLDER); //http://www.xxx.com with
 //===============================================
 // Other Settings
 //===============================================
-$GLOBALS['sitename']='websiteName';
+//$GLOBALS['sitename']='websiteName';
 
 //===============================================
 // Includes
